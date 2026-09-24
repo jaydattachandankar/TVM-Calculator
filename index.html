@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Time Value of Money Calculator">
+  <title>TVM Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="brand"><span>TVM</span> Calculator</div>
+  <nav>
+    <a href="#calculator">Calculator</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="badge">💰 FINANCIAL CALCULATOR</div>
+    <h1>Time Value of <span>Money</span></h1>
+    <p>Calculate Present Value, Future Value, Interest Rate, Number of Periods and Periodic Payment with a simple interactive calculator.</p>
+    <a class="hero-btn" href="#calculator">Start Calculating →</a>
+  </div>
+  <div class="hero-card">
+    <div class="coin">₹</div>
+    <h2>TVM</h2>
+    <p>Money has a time value because it can earn a return over time.</p>
+  </div>
+</section>
+
+<main id="calculator" class="section">
+  <div class="heading">
+    <span>FINANCIAL TOOL</span>
+    <h2>TVM Calculator</h2>
+    <p>Enter four values and leave exactly one field empty.</p>
+  </div>
+
+  <div class="calculator">
+    <section class="inputs">
+      <h3>Enter Values</h3>
+      <p class="hint">Leave one value blank to calculate it.</p>
+
+      <label>Present Value (PV)
+        <div class="input-box"><b>₹</b><input id="pv" type="number" step="any" placeholder="10000"></div>
+      </label>
+
+      <label>Future Value (FV)
+        <div class="input-box"><b>₹</b><input id="fv" type="number" step="any" placeholder="15000"></div>
+      </label>
+
+      <label>Interest Rate
+        <div class="input-box"><input id="rate" type="number" step="any" placeholder="8"><b>%</b></div>
+      </label>
+
+      <label>Number of Periods
+        <div class="input-box"><input id="periods" type="number" step="any" placeholder="5"><b>Years</b></div>
+      </label>
+
+      <label>Periodic Payment (PMT)
+        <div class="input-box"><b>₹</b><input id="pmt" type="number" step="any" placeholder="1000"></div>
+      </label>
+
+      <label>Payment Timing
+        <select id="timing">
+          <option value="end">End of Period</option>
+          <option value="begin">Beginning of Period</option>
+        </select>
+      </label>
+
+      <div class="buttons">
+        <button id="calculate">🧮 Calculate</button>
+        <button id="reset" class="secondary">↻ Reset</button>
+      </div>
+      <div id="message" class="message"></div>
+    </section>
+
+    <section class="results">
+      <div class="result-top">
+        <div>
+          <small>CALCULATION RESULT</small>
+          <h3 id="resultTitle">Your Result</h3>
+        </div>
+        <div class="check">✓</div>
+      </div>
+
+      <div class="big-result">
+        <small>Calculated Value</small>
+        <strong id="resultValue">—</strong>
+      </div>
+
+      <div class="cards">
+        <div><span>PV</span><strong id="outPV">—</strong></div>
+        <div><span>FV</span><strong id="outFV">—</strong></div>
+        <div><span>Rate</span><strong id="outRate">—</strong></div>
+        <div><span>Periods</span><strong id="outPeriods">—</strong></div>
+        <div><span>PMT</span><strong id="outPMT">—</strong></div>
+      </div>
+
+      <div class="formula">
+        <h4>Formula / Method</h4>
+        <p id="formula">Enter values and calculate.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<section id="about" class="section about">
+  <div class="heading">
+    <span>LEARN</span>
+    <h2>What is TVM?</h2>
+    <p>Time Value of Money is a fundamental concept used in finance and investment.</p>
+  </div>
+  <div class="info-grid">
+    <article><div>💰</div><h3>Present Value</h3><p>The value of future money expressed in today's terms.</p></article>
+    <article><div>📈</div><h3>Future Value</h3><p>The amount an investment grows to after a period of time.</p></article>
+    <article><div>⏳</div><h3>Interest Rate</h3><p>The rate used to calculate the growth or discounting of money.</p></article>
+  </div>
+</section>
+
+<footer>
+  <strong>TVM Calculator</strong>
+  <p>Built with HTML, CSS & JavaScript • GitHub Pages Ready</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
